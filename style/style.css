@@ -1,0 +1,61 @@
+/* Réglages généraux*/
+@font-face {
+    font-family: "titre";
+    src: url(./brick.otf);
+}
+
+@font-face {
+  font-family: "base";
+  src: url(./cyber.ttf);
+}
+*{
+  /*Supprimer toutes les marges par défauts pour ne pas être embéte:*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    
+  
+    /*palette de couleur*/
+    --couleur-claire:#3A59D1;
+    --couleur-midclaire:#3D90D7;
+    --couleur-midfonce:#7AC6D2;
+    --couleur-fonce:#B5FCCD;
+    
+}
+    
+    body {
+  font-family: "base";
+  background-color: var(--couleur-claire);
+} 
+/* réglage de la partie nav */
+
+#logo {
+  width: 100px;
+}
+
+/* réglage de la partie header */
+  
+header{
+  width:100vw;
+  background:radial-gradient(circle at center, var(--couleur-midfonce),var(--couleur-fonce));
+  color:var(--couleur-fonce);
+  height:16vh;
+
+
+
+  display:flex ;
+  flex-direction:column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+h1 {
+  font-family:"titre";
+  font-size:4rem;
+}
+h3{
+  font-size:3rem;
+}
+/* réglage de la partie main */
+
+/* réglage de la partie aside */

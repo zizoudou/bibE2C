@@ -1,12 +1,12 @@
 /* Réglages généraux*/
 @font-face {
     font-family: "titre";
-    src: url(./brick.otf);
+    src: url(./titre.ttf);
 }
 
 @font-face {
-  font-family: "base";
-  src: url(./cyber.ttf);
+  font-family: "text";
+  src: url(./text.otf);
 }
 *{
   /*Supprimer toutes les marges par défauts pour ne pas être embéte:*/
@@ -16,7 +16,7 @@
     
   
     /*palette de couleur*/
-    --couleur-claire:#d13a9c;
+    --couleur-claire:#1e9cb5;
     --couleur-midclaire:#3D90D7;
     --couleur-midfonce:#7AC6D2;
     --couleur-fonce:#B5FCCD;
@@ -36,6 +36,8 @@
 /* réglage de la partie header */
   
 header{
+  position: relative;
+  top:20vh;
   width:100vw;
   background:radial-gradient(circle at center, var(--couleur-midfonce),var(--couleur-fonce));
   color:var(--couleur-fonce);
@@ -53,17 +55,35 @@ h1 {
   font-family:"titre";
   font-size:4rem;
 }
+h2{
+  margin-bottom: 8px;
+}
 
 h3{
   font-size:1,5rem;
   
 }
+
+h4{
+font-size: 6rem;
+font-family:"titre";
+color: var(--couleur-claire);
+margin-right: 30px;
+}
+
 nav{
+  position: fixed;
+  height: 20vmin;
+
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
 border-bottom: solid var(--couleur-fonce) 1px;
+
+  width: 100vw;
+  background-color: var(--couleur-claire);
+  z-index: 10;
 }
 
 #nav-bar{
@@ -88,9 +108,11 @@ border-bottom: solid var(--couleur-fonce) 1px;
 
   text-align:center;
   border-radius: 5px;
+  border: solid var(--couleur-claire)2px;
+  transition: background-color 500ms,color 1000ms, border 1000ms;
 }
 .nav-button:hover{
-  background-color: var(--couleur-fonce);
+  background-color: var(--couleur-claire);
   color: var(--couleur-claire);
   border: solid var(--couleur-midfonce)2px;
 
@@ -105,6 +127,9 @@ border-bottom: solid var(--couleur-fonce) 1px;
 /* réglage de la partie aside */
 
 #rangement{
+  position: relative;
+  top:20vmin;
+
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -120,27 +145,96 @@ main{
 article{
   box-shadow: var(--couleur-fonce) 2px 2px 5px 0;
   padding:10%;
+  margin-bottom: 20px;
+  transition: transform 1000ms;
 }
+
+article:hover{
+  transform: scale(0.9);
+}
+
 aside {
+  position: fixed;
+  top: 30vmin;
   width : 20%;
+  right: 0%;
 }
 
-/* images et video /
+/* images et video */
 
-#video-e2c {
-max-width: 100%;
+#video-e2c{
+  max-width: 100%;
 }
 
 #lecture {
 max-width: 100%;
+float: right;
+width: 40%;
 }
 
 #groupe {
 max-width: 100%;
+margin-top: 10px;
 }
 
 #festnum {
 max-width: 100%;
 }
 
+#content{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+p{
+  font-size: 1.5rem;
+}
+#texte1{
+  width: 60%;
+}
+   
+iframe{
+  display: block;
+  width: 35%;
+}
 
+#article>aside{
+  padding: 15px;
+  background-color: var(--couleur-midfonce);
+  color: var(--couleur-claire);
+  border: solid var(--couleur-midclaire)3px;
+  border-radius: 10px;
+}
+
+/* Design De personne*/
+
+.intertext{
+  width: 100%;
+  aspect-ratio: 1904/640;
+  background-image: url(../src/bib2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position-y: 40vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.it2{
+   width: 100%;
+  aspect-ratio: 1904/640;
+  background-image: url(../src/bib1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position-y: 40vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}

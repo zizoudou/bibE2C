@@ -16,4 +16,4 @@ function closeNews(){
 
 trigger.addEventListener("click", showNews);
  /* la croix détecte un click et déclenche la fonction closNews */ 
- close.addEventListener("click", closeNews);
+ close.addEventListener("click", closeNews); 
